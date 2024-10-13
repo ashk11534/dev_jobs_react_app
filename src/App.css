@@ -1,0 +1,395 @@
+.applyNowFormContainer {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.applyNowForm {
+  width: 600px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.applyNowFormHeader {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.applyFormCloseBtn {
+  font-size: 30px;
+  cursor: pointer;
+  color: #d63031;
+}
+
+.applyNowFormBody {
+  padding: 20px;
+}
+
+.formInputLabel {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+#coverLetterInput {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 100%;
+  outline: none;
+  padding: 5px;
+}
+
+#resumeInput {
+  font-size: 14px;
+}
+
+.devNavBar {
+  width: 100%;
+  height: 140px;
+  background-color: #5762dc;
+}
+
+.devNavBar .container {
+  height: 100%;
+}
+
+.navBarMainContent {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  position: relative;
+}
+
+.navTitle a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.navSearchBar {
+  position: absolute;
+  width: 100%;
+  height: fit-content;
+  background-color: #fff;
+  bottom: 0;
+  transform: translateY(50%);
+  border-radius: 5px;
+}
+
+.navSearchBar {
+  display: flex;
+}
+
+.filterByFT {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filterByFT input,
+.filterByFT label {
+  cursor: pointer;
+}
+
+#filterByLCE,
+#filterByLocation {
+  outline: none !important;
+}
+
+#filterByLCE,
+#filterByLocation,
+.filterByFTandSubmit {
+  width: 33.33%;
+  padding: 10px 15px;
+  border: none;
+  border-right: 1px solid #ddd;
+  font-size: 15px;
+}
+
+#filterByLCE {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.filterByFTandSubmit {
+  border-right: none;
+}
+
+.filterByFTandSubmit {
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.searchBtn {
+  border: none;
+  padding: 10px 20px;
+  background-color: #5762dc;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.jobsContainer {
+  display: flex;
+  gap: 15px;
+  margin-top: 100px;
+  flex-wrap: wrap;
+}
+
+.jobItem {
+  width: 23%;
+  background-color: #fff;
+  position: relative;
+  padding: 25px 20px;
+  border-radius: 5px;
+  margin-bottom: 50px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #333;
+}
+
+.companyLogo {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #fff;
+  top: 0;
+  transform: translateY(-50%);
+  border: 1px solid #ddd;
+}
+
+.companyLogo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.timeAndType {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+}
+
+.separator {
+  width: 4px;
+  height: 4px;
+  border-radius: 100%;
+  background-color: #797d88;
+}
+
+.jobName {
+  font-weight: 600;
+}
+
+.companyName {
+  font-size: 15px;
+}
+
+.jobLocation {
+  font-size: 14px;
+  font-weight: 500;
+  color: #5762dc;
+}
+
+.jobDetailHeader {
+  position: absolute;
+  bottom: -20px;
+  transform: translateY(50%);
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 15px;
+  padding-right: 30px;
+  border-radius: 5px;
+}
+
+.companyLogoAndDesc {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.jobDetailCompanyLogo {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+
+.jobDetailCompanyLogo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.companyLink {
+  background-color: #efeffb;
+  color: #5762dc;
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 14px;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+.jobDetailCompanyDesc p {
+  font-size: 14px;
+}
+
+.jobDetailsMainContent {
+  margin-top: 120px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 5px;
+}
+
+.jobDetailsMainContentHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.applyNowBtn {
+  border: none;
+  padding: 10px 20px;
+  background-color: #5762dc;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.jobDetailsMainContentBody p {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* Responsiveness (start) */
+@media (min-width: 0px) {
+  .navSearchBar {
+    flex-direction: column;
+    top: 15px;
+  }
+
+  .jobsContainer {
+    margin-top: 200px;
+  }
+
+  .jobDetailsMainContent {
+    margin-top: 150px;
+  }
+
+  #filterByLCE,
+  #filterByLocation,
+  .filterByFTandSubmit {
+    width: 100%;
+    border-right: none;
+  }
+
+  .filterByFTandSubmit {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  #filterByLCE {
+    border-top-right-radius: 5px;
+  }
+
+  .jobItem {
+    width: 100%;
+  }
+
+  .applyNowForm {
+    width: 90%;
+  }
+
+  .jobDetailHeader {
+    align-items: start;
+    flex-direction: column;
+    bottom: -50px;
+  }
+
+  .companyLink {
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: 568px) {
+}
+@media (min-width: 768px) {
+  .jobItem {
+    width: 48%;
+  }
+
+  .jobDetailHeader {
+    align-items: center;
+    flex-direction: row;
+    bottom: -20px;
+  }
+
+  .companyLink {
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+
+  .jobDetailsMainContent {
+    margin-top: 90px;
+  }
+
+  .applyNowForm {
+    width: 600px;
+    bottom: -20px;
+  }
+}
+@media (min-width: 992px) {
+  .navSearchBar {
+    flex-direction: row;
+    top: auto;
+  }
+
+  .jobsContainer {
+    margin-top: 100px;
+  }
+
+  #filterByLCE,
+  #filterByLocation,
+  .filterByFTandSubmit {
+    width: 33.33%;
+  }
+
+  #filterByLCE,
+  #filterByLocation {
+    border-right: 1px solid #ddd;
+  }
+
+  .filterByFTandSubmit {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  #filterByLCE {
+    border-top-left-radius: 5px;
+  }
+
+  .jobItem {
+    width: 23%;
+  }
+}
+@media (min-width: 1200px) {
+}
+@media (min-width: 1400px) {
+}
+/* Responsiveness (end) */
