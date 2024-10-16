@@ -7,7 +7,7 @@ const Item = function ({ job }) {
         <img src={`data:image/png;base64,${job.company_logo}`} />
       </div>
       <div className="timeAndType mb-2 mt-3">
-        <p className="jobUploadingTime text-muted">5h ago</p>
+        <p className="jobUploadingTime text-muted">{job.created_date}</p>
         <div className="separator"></div>
         <p className="jobType text-muted">
           {job.job_type === "full_time" ? "Full Time" : "Part Time"}

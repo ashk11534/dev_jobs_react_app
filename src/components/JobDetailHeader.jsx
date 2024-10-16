@@ -1,20 +1,20 @@
 import { Link } from "react-router-dom";
 
-const JobDetailHeader = function () {
+const JobDetailHeader = function ({jobDetails}) {
   return (
     <div className="jobDetailHeader">
       <div className="companyLogoAndDesc">
         <div className="jobDetailCompanyLogo">
-          <img src="../../images/company_logo_2.png" />
+          <img src={`data:image/png;base64,${jobDetails.company_logo}`} />
         </div>
         <div className="jobDetailCompanyDesc">
-          <h5>Scoot</h5>
-          <p className="text-muted">scoot.com</p>
+          <h5>{jobDetails.company_name}</h5>
+          <p className="text-muted">{jobDetails.company_website_url}</p>
         </div>
       </div>
-      <Link to="/" className="companyLink">
+      <a href={`http://${jobDetails.company_website_url}`} className="companyLink">
         Company Site
-      </Link>
+      </a>
     </div>
   );
 };
