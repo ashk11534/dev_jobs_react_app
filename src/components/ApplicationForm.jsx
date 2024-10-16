@@ -15,7 +15,11 @@ const ApplicationForm = function ({ handleShowApplicationForm }) {
           <textarea id="coverLetterInput" className="mb-3" rows={8}></textarea>
 
           <p className="formInputLabel mb-1">Resume (Only PDF)</p>
-          <input type="file" id="resumeInput" accept="application/pdf" />
+          <input type="file" id="resumeInput" accept="application/pdf" className="mb-4" />
+
+          <br/>
+
+          <button className="applicationSubmitBtn">Submit</button>
         </div>
       </div>
     </div>
