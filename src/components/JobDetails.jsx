@@ -19,7 +19,7 @@ const JobDetails = function () {
   useEffect(() => {
     setLoading(true);
 
-    fetch(`http://localhost:8089/job-details/${jobId}`).then(res => res.json()).then((data) => {
+    fetch(`http://localhost:8085/job-details/${jobId}`).then(res => res.json()).then((data) => {
       setJobDetails(data.job_data);
       setLoading(false);
     })
@@ -30,7 +30,7 @@ const JobDetails = function () {
       {showApplicationForm && (
         <ApplicationForm handleShowApplicationForm={setShowApplicationForm} handleShowGreetingsForm={setShowGreetingsForm} />
       )}
-      {showGreetingsForm && <GreetingsForm handleShowGreetingsForm={setShowGreetingsForm} loading={true}/>}
+      {showGreetingsForm && <GreetingsForm handleShowGreetingsForm={setShowGreetingsForm}/>}
       <NavBar>
         {jobDetails && <JobDetailHeader jobDetails={jobDetails} />}
       </NavBar>

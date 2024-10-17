@@ -19,7 +19,7 @@ const SearchBar = function ({setAllJobs, setLoading}) {
     formData.append('location', locationRef.current.value);
     formData.append('fullTime', fullTimeRef.current.checked);
 
-    fetch('http://localhost:8089/job-search', {
+    fetch('http://localhost:8085/job-search', {
       method: 'POST',
       body: formData
     }).then(res => res.json()).then(data => {

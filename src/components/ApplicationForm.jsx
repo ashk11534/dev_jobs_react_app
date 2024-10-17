@@ -25,7 +25,7 @@ const ApplicationForm = function ({ handleShowApplicationForm, handleShowGreetin
     formData.append('resume', resumeRef.current.files[0]);
 
 
-    fetch('http://localhost:8089/job-application', {
+    fetch('http://localhost:8085/job-application', {
       method: 'POST',
       body: formData
     }).then(res => res.json()).then(data => {

@@ -14,7 +14,7 @@ const JobItems = function () {
   useEffect(() => {
     setLoading(true);
 
-    fetch("http://localhost:8089/dev-jobs")
+    fetch("http://localhost:8085/dev-jobs")
       .then((res) => res.json())
       .then((data) => {
         setAllJobs(data.dev_jobs);
