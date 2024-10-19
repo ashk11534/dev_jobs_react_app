@@ -5,8 +5,8 @@ const NavBar = function ({ children, setRenderComponent }) {
     <nav className="devNavBar">
       <div className="container">
         <div className="navBarMainContent">
-          <h3 className="navTitle" onClick={() => setRenderComponent(false)}>
-            <Link to="/">Devjobs</Link>
+          <h3 className="navTitle" onClick={() => setRenderComponent?.(false)}>
+            <Link to="/">DevJobs</Link>
           </h3>
           {children}
         </div>

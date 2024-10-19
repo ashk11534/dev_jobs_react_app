@@ -19,29 +19,37 @@ const JobDetails = function () {
   useEffect(() => {
     setLoading(true);
 
-    fetch(`http://localhost:8085/job-details/${jobId}`).then(res => res.json()).then((data) => {
-      setJobDetails(data.job_data);
-      setLoading(false);
-    })
-  }, [jobId])
+    fetch(`http://localhost:8085/job-details/${jobId}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setJobDetails(data.job_data);
+        setLoading(false);
+      });
+  }, [jobId]);
 
   return (
     <>
       {showApplicationForm && (
-        <ApplicationForm handleShowApplicationForm={setShowApplicationForm} handleShowGreetingsForm={setShowGreetingsForm} />
+        <ApplicationForm
+          jobId={jobId}
+          handleShowApplicationForm={setShowApplicationForm}
+          handleShowGreetingsForm={setShowGreetingsForm}
+        />
       )}
-      {showGreetingsForm && <GreetingsForm handleShowGreetingsForm={setShowGreetingsForm}/>}
+      {showGreetingsForm && (
+        <GreetingsForm handleShowGreetingsForm={setShowGreetingsForm} />
+      )}
       <NavBar>
         {jobDetails && <JobDetailHeader jobDetails={jobDetails} />}
       </NavBar>
-      {jobDetails && 
-      <JobDetailsMainContent
-        jobDetails={jobDetails}
-        handleShowApplicationForm={setShowApplicationForm}
-      />
-      }
+      {jobDetails && (
+        <JobDetailsMainContent
+          jobDetails={jobDetails}
+          handleShowApplicationForm={setShowApplicationForm}
+        />
+      )}
 
-      {loading && <Loader/>}
+      {loading && <Loader />}
     </>
   );
 };
